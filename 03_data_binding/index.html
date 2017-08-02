@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Data Binding</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://unpkg.com/vue" type="text/javascript"></script>
+    </head>
+    <body>
+        <div id="vue-app">
+            <h1>Data Binding in Vue</h1>
+            <p>Code by: {{ name }}</p>
+            <input type="text" name="" v-bind:value="interest">
+            <a v-bind:href="website">Vue Tutorial</a>
+            <p v-html="websiteTag"></p>
+        </div>
+        <script src="app.js" type="text/javascript"></script>
+    </body>
+</html>

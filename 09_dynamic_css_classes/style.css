@@ -1,0 +1,15 @@
+span {
+    background-color: #0f0;
+    display: inline-block;
+    padding: 10px;
+    color: #fff;
+    margin: 10px 0;
+    position: relative;
+}
+.available span{
+    background-color: #7b9f8b;
+}
+.adjacent::before{
+    content: 'adjacent';
+    margin-left: 10px;
+}

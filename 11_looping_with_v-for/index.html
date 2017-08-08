@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>looping with v-for</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://unpkg.com/vue" type="text/javascript"></script>
+    </head>
+    <body>
+        <div id="vue-app">
+            <h1>looping with v-for</h1>
+            <p>Looping through array</p>
+            <ul>
+                <li v-for="(fruit,index) in fruits">{{index}}. {{fruit}}</li>
+            </ul>
+            <hr>
+            <p>Looping with objects</p>
+            <ul>
+                <li v-for="dress in dresses">{{dress.name }}-{{ dress.color}}</li>
+            </ul>
+            <hr>
+            <!-- template use for v-for loop to loop thorugh the inside elements only -->
+            <template id="" v-for="dress in dresses">
+                <h2>{{dress.name}}</h2>
+                <p>{{dress.color}}</p>
+            </template>
+            <hr>
+            <!-- loop through each objects inside object -->
+            <template id="" v-for="dress in dresses">
+                <div v-for="(key,val) in dress">
+                    {{val}}-{{key}}
+                </div>
+            </template>
+
+        </div>
+        <script src="app.js" type="text/javascript"></script>
+    </body>
+</html>

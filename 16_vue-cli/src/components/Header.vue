@@ -1,14 +1,24 @@
 <template>
     <header>
-        <h2>{{ title }}</h2>
+        <h2 v-on:click = "changeTitle">{{ title }}</h2>
     </header>
 </template>
 
 <script>
 export default {
+    props: {
+        title: {
+            type: String
+        }
+    },
     data () {
         return {
-            title: 'Components Examples'
+
+        }
+    },
+    methods: {
+        changeTitle: function() {
+            this.title = 'header title changed';
         }
     }
 }

@@ -1,8 +1,10 @@
 <template>
     <div class="">
-        <app-header></app-header>
-        <app-team></app-team>
-        <app-footer></app-footer>
+        <app-header v-bind:title = "title"></app-header>
+        <app-team v-bind:team="team"></app-team>
+        <hr>
+        <app-team v-bind:team="team"></app-team>
+        <app-footer v-bind:title = "title"></app-footer>
     </div>
 </template>
 
@@ -20,7 +22,15 @@ export default {
     },
     data () {
         return {
-
+            team: [
+                {name: 'Rahad', speciality: 'vue js', show: false},
+                {name: 'Oishy', speciality: 'Html', show: false},
+                {name: 'Mazher', speciality: 'Laravel', show: false},
+                {name: 'Maria', speciality: 'PHP', show: false},
+                {name: 'Saddam', speciality: 'Civil', show: false},
+                {name: 'Sany', speciality: 'Medical', show: false}
+            ],
+            title: 'Vue Primitives and References'
         }
     }
 }

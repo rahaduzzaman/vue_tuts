@@ -6,21 +6,26 @@
                 <h2 v-show="member.show">{{member.speciality}}</h2>
             </li>
         </ul>
+        <button type="button" name="button" v-on:click="deleteMember">Delete Member</button>
     </div>
 </template>
 
 <script>
 export default {
+    props: {
+        team: {
+            type: Array,
+            required: true
+        }
+    },
     data () {
         return {
-            team: [
-                {name: 'Rahad', speciality: 'vue js', show: false},
-                {name: 'Oishy', speciality: 'Html', show: false},
-                {name: 'Mazher', speciality: 'Laravel', show: false},
-                {name: 'Maria', speciality: 'PHP', show: false},
-                {name: 'Saddam', speciality: 'Civil', show: false},
-                {name: 'Sany', speciality: 'Medical', show: false}
-            ]
+
+        }
+    },
+    methods: {
+        deleteMember: function() {
+            this.team.pop();
         }
     }
 }
@@ -46,6 +51,12 @@ export default {
                 border: 1px solid #cdcdcd;
                 margin: 10px;
             }
+        }
+        button {
+            display: inline-block;
+            padding: 15px 20px;
+            color: #fff;
+            background: #0cc652;
         }
     }
 </style>

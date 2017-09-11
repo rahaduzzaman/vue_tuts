@@ -1,8 +1,8 @@
 <template>
     <div class="">
-        <app-header v-bind:title = "title" v-on:changeTitle="updateTitle($event)"></app-header>
+        <app-header></app-header>
         <app-team v-bind:team="team"></app-team>
-        <app-footer v-bind:title = "title"></app-footer>
+        <app-footer></app-footer>
     </div>
 </template>
 
@@ -27,13 +27,7 @@ export default {
                 {name: 'Maria', speciality: 'PHP', show: false},
                 {name: 'Saddam', speciality: 'Civil', show: false},
                 {name: 'Sany', speciality: 'Medical', show: false}
-            ],
-            title: 'Vue Primitives and References'
-        }
-    },
-    methods: {
-        updateTitle: function(updatedTitle){
-            this.title = updatedTitle;
+            ]
         }
     }
 }

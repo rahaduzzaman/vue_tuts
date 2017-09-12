@@ -27,25 +27,6 @@ export default {
         deleteMember: function() {
             this.team.pop();
         }
-    },
-    //life cycle hooks
-    beforeCreate(){
-        alert('beforeCreate');
-    },
-    created(){
-        alert('created');
-    },
-    beforeMount(){
-        alert('beforeMount');
-    },
-    mounted(){
-        alert('mounted');
-    },
-    beforeUpdate(){
-        alert('beforeUpdate');
-    },
-    updated(){
-        alert('updated');
     }
 }
 </script>

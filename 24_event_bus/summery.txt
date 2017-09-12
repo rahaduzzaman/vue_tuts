@@ -1,0 +1,4 @@
+1. create new vue instance in main.js (this is how event bus is cretaed) and export it
+2. import the bus in the child vue components in which components you want to change data
+3. create an event and emit it in the one child component from where you want to change data of the other component
+4. use "life cycle hook" to fire the event to the another child component

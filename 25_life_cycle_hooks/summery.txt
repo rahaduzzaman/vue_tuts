@@ -1,0 +1,3 @@
+1. See Team.vue for different kinds of hooks;
+
+>> life cycle hooks are important for applying any kind of behavior to the app in different phase of the data process

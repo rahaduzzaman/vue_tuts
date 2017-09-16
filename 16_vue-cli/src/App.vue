@@ -1,50 +1,42 @@
 <template>
     <div class="">
-        <form-helper>
-            <div slot="form-header">
-                <h2>This is a testing form for Vue slot</h2>
-                <p>Information about the form</p>
-            </div>
-            <div slot="form-fields">
-                <input type="text" name="" value="" placeholder="Your Name">
-                <input type="email" name="" value="" placeholder="Your Email">
-            </div>
-            <div slot="form-controls">
-                <button v-on:click="handleSubmit">Submit</button>
-            </div>
-        </form-helper>
+        <keep-alive>    
+        <component v-bind:is="component"></component>
+        </keep-alive>
+        <button v-on:click="component ='form-one'">Show from One</button>
+        <button v-on:click="component ='form-two'">Show from Two</button>
     </div>
 </template>
 
 <script>
 
-import formHelper from './components/formHelper.vue'
+import formHelper from './components/formHelper.vue';
+import formOne from './components/form1.vue';
+import formTwo from './components/form2.vue';
 
 export default {
     components: {
-        'form-helper': formHelper
+        'form-helper': formHelper,
+        'form-one': formOne,
+        'form-two': formTwo
     },
     data () {
         return {
-            team: [
-                {name: 'Rahad', speciality: 'vue js', show: false},
-                {name: 'Oishy', speciality: 'Html', show: false},
-                {name: 'Mazher', speciality: 'Laravel', show: false},
-                {name: 'Maria', speciality: 'PHP', show: false},
-                {name: 'Saddam', speciality: 'Civil', show: false},
-                {name: 'Sany', speciality: 'Medical', show: false}
-            ],
-            title: 'Vue Event Bus'
+           component: 'form-two'
         }
     },
     methods: {
-        updateTitle: function(updatedTitle){
-            this.title = updatedTitle;
-        }
+        
     }
 }
 </script>
 
 <style scoped lang="scss">
-
+ button {
+     padding: 10px; 
+     border: none;
+     background-color: #cdcdcd;
+     color: #222;
+     
+ }
 </style>

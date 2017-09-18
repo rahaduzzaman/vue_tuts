@@ -16,10 +16,6 @@
                 <label for="React">React</label>
                 <input type="checkbox" value="react" v-model="blog.categories">
             </div>
-            <label for="React">Author</label>
-            <select name="" v-model="blog.author">
-                <option v-for="author in authors">{{ author }}</option>
-            </select>
         </form>
         <div class="preview">
             <h3>Preview Blog</h3>
@@ -29,7 +25,6 @@
             <ul>
                 <li v-for="category in blog.categories">{{ category }}</li>
             </ul>
-            <p>Author: {{ blog.author }}</p>
         </div>
     </div>
 </template>
@@ -45,10 +40,8 @@ export default {
             blog: {
                 title: "",
                 content: "",
-                categories: [],
-                author: ""
-            },
-            authors: ['Rahaduzzaman', 'Vue Boss', 'Perfect Coder']
+                categories: []
+            }
         }
     },
     methods: {

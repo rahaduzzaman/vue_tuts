@@ -1,9 +1,9 @@
 <template>
     <div class="blogs-wrapper">
-        <h1>All Blogs</h1>
+        <h1>List Blogs</h1>
         <input type="text" v-model="search" placeholder="search here...">
         <div v-for="blog in filterBlogs" class="single-blog">
-            <router-link v-bind:to="'/blog/'+blog.id"><h3>{{ blog.title | to-uppercase }}</h3></router-link>
+            <h3>{{ blog.title | to-uppercase }}</h3>
             <p v-rainbow>{{ blog.body | shorten }}</p>
         </div>
     </div>
@@ -12,7 +12,7 @@
 <script>
 import searchMixin from '../mixins/searchMixin';
 export default {
- 
+    
     data () {
         return {
           blogs: [],
